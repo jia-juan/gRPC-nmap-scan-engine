@@ -18,7 +18,7 @@ class TestSSLServer(SSLgRPCServer):
 
     def register_service(self):
         scan_pb2_grpc.add_ScanServiceServicer_to_server(
-            ScanServicer(), self.server)
+            ScanServicer(), self._server)
 
 
 if __name__ == "__main__":

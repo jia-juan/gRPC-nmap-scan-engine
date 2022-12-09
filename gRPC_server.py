@@ -60,6 +60,10 @@ class BasegRPCServer:
 class SSLgRPCServer(BasegRPCServer,
                     SSLCredentialsMixin):
 
+    def __init__(self) -> None:
+        BasegRPCServer.__init__(self)
+        SSLCredentialsMixin.__init__(self)
+
     def run(self):
         '''
         有 SSL 憑證
